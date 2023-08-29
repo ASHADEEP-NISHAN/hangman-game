@@ -98,9 +98,11 @@ while display != split and chance >0:
 
     if chance > 0:
         letter_guess = input("\nguess a letter").lower()
-
+        if letter_guess in display:
+            print(f"you have already guessed {letter_guess}")
         if letter_guess not in word:
             print("wrong guess")
+            print("you lose a life")
             print(hangman_stages[s])
 
 
